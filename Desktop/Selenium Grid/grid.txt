@@ -1,0 +1,72 @@
+cd..
+do papki gde bydet SELENIUM GRID
+
+
+
+comp B:   C:\yes>java -Dwebdriver.chrome.driver="c:\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.0.12:4444/grid/register -port4444
+         ili - C:\yes>java -Dwebdriver.firefox.driver="c:\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.0.12:4444/grid/register -port4444
+CoMP B:    C:\yes>java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.0.12:4444/grid/register -port 4444
+
+
+comp A: java -jar selenium-server-standalone-3.141.59.jar -port 4444 -role hub
+
+
+ZAKACHATB  JAR FILE SELENIUM GRID NA 2 KOMPA V selenium v library 
+
+PEREITI NA SAIT: NODE I DOBAVIT http://192.168.0.12:4444/grid/CONSOLE - KOMP-A
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  package com.doc1;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+public class we {
+
+ static WebDriver driver;
+
+ @Test(priority = 1)
+ void setup() throws MalformedURLException {
+  String nodeURL = "http://192.168.0.11:4444/wd/hub"; // The URL will be
+               //  IP Address of Hub Machine + Hub Port + /wd/hub
+               // "http://192.168.13.1:4444/wd/hub"
+               // Here Hub and Node are same machines
+
+  DesiredCapabilities cap = DesiredCapabilities.firefox();
+  cap.setBrowserName("firefox");
+  cap.setPlatform(Platform.WINDOWS);
+
+  driver = new RemoteWebDriver(new URL(nodeURL), cap);
+  driver.get("http://practice.automationtesting.in/my-account/");
+ }
+
+ @Test(priority = 2)
+ void login() {
+  driver.get("http://practice.automationtesting.in/my-account/");
+  driver.findElement(By.id("username")).sendKeys("pavanoltraining");
+  driver.findElement(By.id("password")).sendKeys("Test@selenium123");
+  driver.findElement(By.name("login")).click();
+
+  String captext = driver.findElement(By.xpath("//*[@id='page-36']/div/div[1]/div/p[1]")).getText();
+
+  if (captext.contains("pavanoltraining")) {
+   System.out.println("Test passed");
+  } else {
+   System.out.println("Test failed");
+  }
+
+ // driver.close();
+
+ }
+
+}
+
