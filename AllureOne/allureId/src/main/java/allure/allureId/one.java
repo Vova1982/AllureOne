@@ -32,7 +32,7 @@ public class one extends BaseClass{
 	public void setUp() {
 		BaseClass bs= new BaseClass();
 		driver = bs.initialize_driver();
-		driver.get("https://demo.nopcommerce.com/");
+		driver.navigate().to("http://automationpractice.com/index.php");
 		
 	}
 	
@@ -45,7 +45,7 @@ public class one extends BaseClass{
 	@Step("Verify logo Presence")
 	public void logoPresence() throws InterruptedException
 	{
-		boolean dispStatus=driver.findElement(By.xpath("//div[@class='header-logo']//a//img")).isDisplayed();
+		boolean dispStatus=driver.findElement(By.id("header_logo")).isDisplayed();
 		Assert.assertEquals(dispStatus, true);
 	}
 	
@@ -58,10 +58,10 @@ public class one extends BaseClass{
 	@Step("Verify login")
 	public void loginTest() throws InterruptedException
 	{
-		driver.findElement(By.linkText("Log in")).click();
-		driver.findElement(By.id("Email")).sendKeys("pavanoltraining@gmail.com");
-		driver.findElement(By.id("Password")).sendKeys("Test@123");
-		driver.findElement(By.xpath("//input[@class='button-1 login-button']")).click();
+		//driver.findElement(By.id("Log in")).click();
+		driver.findElement(By.id("search_query_top")).sendKeys("dress");
+		//driver.findElement(By.id("Password")).sendKeys("Test@123");
+		 driver.findElement(By.name("submit_search")).click();
 		Thread.sleep(3000);
 		Assert.assertEquals(driver.getTitle(), "nopCommerce demo store123");
 

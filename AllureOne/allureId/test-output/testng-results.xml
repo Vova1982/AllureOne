@@ -2,26 +2,26 @@
 <testng-results skipped="1" failed="1" ignored="0" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="15973" started-at="2020-12-21T15:31:43 EST" finished-at="2020-12-21T15:31:59 EST">
+  <suite name="Suite" duration-ms="14847" started-at="2020-12-21T17:15:48 EST" finished-at="2020-12-21T17:16:03 EST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="15973" started-at="2020-12-21T15:31:43 EST" finished-at="2020-12-21T15:31:59 EST">
+    <test name="Test" duration-ms="14847" started-at="2020-12-21T17:15:48 EST" finished-at="2020-12-21T17:16:03 EST">
       <class name="allure.allureId.one">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:allure.allureId.one@74d7184a]" name="setUp" is-config="true" duration-ms="9804" started-at="2020-12-21T15:31:43 EST" finished-at="2020-12-21T15:31:53 EST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:allure.allureId.one@3153ddfc]" name="setUp" is-config="true" duration-ms="8611" started-at="2020-12-21T17:15:48 EST" finished-at="2020-12-21T17:15:57 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="logoPresence()[pri:1, instance:allure.allureId.one@74d7184a]" name="logoPresence" duration-ms="377" started-at="2020-12-21T15:31:53 EST" description="Verify Logo presence on Home Page" finished-at="2020-12-21T15:31:54 EST">
+        <test-method status="PASS" signature="logoPresence()[pri:1, instance:allure.allureId.one@3153ddfc]" name="logoPresence" duration-ms="119" started-at="2020-12-21T17:15:57 EST" description="Verify Logo presence on Home Page" finished-at="2020-12-21T17:15:57 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoPresence -->
-        <test-method status="FAIL" signature="loginTest()[pri:2, instance:allure.allureId.one@74d7184a]" name="loginTest" duration-ms="4254" started-at="2020-12-21T15:31:54 EST" description="Verify login" finished-at="2020-12-21T15:31:58 EST">
+        <test-method status="FAIL" signature="loginTest()[pri:2, instance:allure.allureId.one@3153ddfc]" name="loginTest" duration-ms="4989" started-at="2020-12-21T17:15:57 EST" description="Verify login" finished-at="2020-12-21T17:16:02 EST">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [nopCommerce demo store123] but found [nopCommerce demo store. Login]]]>
+              <![CDATA[expected [nopCommerce demo store123] but found [Search - My Store]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [nopCommerce demo store123] but found [nopCommerce demo store. Login]
+              <![CDATA[java.lang.AssertionError: expected [nopCommerce demo store123] but found [Search - My Store]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertEqualsImpl(Assert.java:140)
@@ -63,7 +63,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="SKIP" signature="registrationTest()[pri:3, instance:allure.allureId.one@74d7184a]" name="registrationTest" duration-ms="6" started-at="2020-12-21T15:31:59 EST" description="Verify user Registration" finished-at="2020-12-21T15:31:59 EST">
+        <test-method status="SKIP" signature="registrationTest()[pri:3, instance:allure.allureId.one@3153ddfc]" name="registrationTest" duration-ms="3" started-at="2020-12-21T17:16:02 EST" description="Verify user Registration" finished-at="2020-12-21T17:16:02 EST">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping this Test]]>
@@ -105,7 +105,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:allure.allureId.one@74d7184a]" name="tearDown" is-config="true" duration-ms="630" started-at="2020-12-21T15:31:59 EST" finished-at="2020-12-21T15:31:59 EST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:allure.allureId.one@3153ddfc]" name="tearDown" is-config="true" duration-ms="607" started-at="2020-12-21T17:16:02 EST" finished-at="2020-12-21T17:16:03 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
